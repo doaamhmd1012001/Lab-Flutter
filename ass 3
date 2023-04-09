@@ -1,0 +1,90 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+          backgroundColor: Colors.teal,
+          body: SafeArea(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                CircleAvatar(
+                  radius: 50,
+                  backgroundImage: AssetImage('images/DoDo.jpg'),
+                ),
+                Text(
+                  "Doaaaa Mohammmmed",
+                  style: TextStyle(
+                      fontSize: 25.0,
+                      color: Color.fromARGB(255, 239, 229, 179),
+                      fontFamily: "Pacifico"),
+                ),
+                Text(
+                  "Flutter Developer",
+                  style: TextStyle(
+                      fontSize: 23.0,
+                      color: Color.fromARGB(226, 240, 221, 186),
+                      fontFamily: "Pacifico"),
+                ),
+                SizedBox(
+                  height: 8.0,
+                  width: 180,
+                  child: new Center(
+                    child: new Container(
+                      margin:
+                          new EdgeInsetsDirectional.only(start: 1.0, end: 1.0),
+                      height: 1.0,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                Card(
+                  margin: EdgeInsets.symmetric(vertical: 8, horizontal: 20),
+                  child: Padding(
+                      padding: EdgeInsets.all(8),
+                      child: ListTile(
+                        leading: Icon(
+                          Icons.phone,
+                        color: Color.fromARGB(255, 31, 97, 86)
+                        ),
+                        title: Text(
+                          "+123456789012345",
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 33, 86, 77),
+                            fontFamily: "Pacifico",
+                            fontSize: 22,
+                          ),
+                        ),
+                      )),
+                ),
+                Card(
+                  margin: EdgeInsets.symmetric(vertical: 8, horizontal: 20),
+                  child: Padding(
+                      padding: EdgeInsets.all(8),
+                      child: ListTile(
+                        leading: Icon(
+                          Icons.email_rounded,
+                          color: Color.fromARGB(255, 45, 102, 97),
+                        ),
+                        title: Text(
+                          "dm1641@fayoum.edu.eg",
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 45, 103, 93),
+                            fontFamily: "SourceSansPro",
+                            fontSize: 17,
+                          ),
+                        ),
+                      )),
+                ),
+              ],
+            ),
+          )),
+    );
+  }
+}
